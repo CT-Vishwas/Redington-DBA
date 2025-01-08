@@ -3,14 +3,10 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: northwind
     networks:
       - mysql
     ports:
       - "3306:3306"
     volumes:
-      - mysql-data:/var/lib/mysql
-volumes:
-  mysql-data:
-
-networks:
-  mysql:
+      - ./sampledbs:/docker-entrypoint-initdb.d
