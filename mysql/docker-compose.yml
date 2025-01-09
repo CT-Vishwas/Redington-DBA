@@ -1,5 +1,6 @@
+name: mysql1
 services:
-  mysql-dev:
+  mysql1:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: root
